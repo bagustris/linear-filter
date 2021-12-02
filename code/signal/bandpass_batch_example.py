@@ -12,6 +12,7 @@ fs = 4800.0
 lowcut = 400.0
 highcut = 1200.0
 
+# total time of data
 T = 0.06
 t, x = make_data(T, fs)
 
@@ -54,4 +55,5 @@ plt.axis('tight')
 plt.xlim(0, T)
 plt.legend(framealpha=1, shadow=True, loc='upper left')
 plt.tight_layout()
-plt.savefig("bandpass_batch_example.pdf")
+# plt.savefig("bandpass_batch_example.pdf")
+plt.show()

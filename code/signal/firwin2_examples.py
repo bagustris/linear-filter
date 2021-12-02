@@ -22,7 +22,7 @@ w_none, h_none = freqz(taps_none, 1, worN=2000)
 w_h, h_h = freqz(taps_h, 1, worN=2000)
 w_k, h_k = freqz(taps_k, 1, worN=2000)
 
-plt.figure(figsize=(4.0, 2.8))
+plt.figure()  # default figsize=(4.0, 2.8)
 
 win_boxcar = boxcar(numtaps)
 win_hamming = hamming(numtaps)
@@ -39,9 +39,9 @@ plt.title("Window functions", fontsize=10)
 plt.legend(framealpha=1, shadow=True)
 plt.tight_layout()
 
-plt.savefig("firwin2_examples_windows.pdf")
+# plt.savefig("firwin2_examples_windows.pdf")
 
-plt.figure(figsize=(4.0, 3.5))
+plt.figure()  # default:figsize=(4.0, 3.5)
 plt.plot(freqs, gains, 'k--', alpha=0.5, linewidth=1, label='ideal')
 
 plt.plot(0.5*fs*w_h/np.pi, np.abs(h_h), label='Hamming')
@@ -50,7 +50,7 @@ plt.plot(0.5*fs*w_none/np.pi, np.abs(h_none), label='rectangular')
 plt.xlim(0, 210)
 plt.xlabel('Frequency (Hz)')
 plt.ylabel('Gain')
-plt.legend(framealpha=1, shadow=True, loc='center right')
+plt.legend(framealpha=1, shadow=True)
 plt.grid(alpha=0.25)
 
 plt.text(9, .08, "%d taps" % numtaps, fontsize=9)
@@ -58,4 +58,5 @@ plt.text(9, .08, "%d taps" % numtaps, fontsize=9)
 plt.title('Filters designed with the window method', fontsize=10)
 plt.tight_layout()
 
-plt.savefig("firwin2_examples.pdf")
+# plt.savefig("firwin2_examples.pdf")
+plt.show()
