@@ -2,10 +2,10 @@
 # memfilter satu sinyal dengan FIR filter
 # Bagaimana jika kita ingin memfilter banyak filter bersamaan?
 
+# misal ada 2 atau lebih sinyal
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
-
 
 def butter_bandpass(lowcut, highcut, fs, order):
     nyq = 0.5 * fs
@@ -68,7 +68,7 @@ while start < len(x):
     start = stop
 
 
-plt.figure(figsize=(4.0, 3.2))
+plt.figure() #figsize=(4.0, 3.2)
 
 plt.plot(t, x, 'k', alpha=0.4, linewidth=1, label='Noisy signal')
 # plt.show()

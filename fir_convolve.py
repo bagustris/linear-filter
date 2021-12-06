@@ -1,3 +1,4 @@
+# fir demo
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -13,10 +14,10 @@ y = np.convolve(x, taps, mode='same')
 
 plt.figure()
 plt.subplot(3, 1, 1)
-plt.plot(x)
+plt.stem(x)
 plt.subplot(3, 1, 2)
-plt.plot(taps)
+plt.stem(taps)
 plt.subplot(3, 1, 3)
-plt.plot(y)
+plt.stem(y)
 
 plt.show()

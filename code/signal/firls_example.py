@@ -11,7 +11,7 @@ fs = 200
 f1 = 15
 f2 = 30
 
-bands =   np.array([0, f1, f1, f2, f2, 0.5*fs])
+bands = np.array([0, f1, f1, f2, f2, 0.5*fs])
 desired = np.array([1,  1,  1,  0,  0,      0])
 taps1 = firls(numtaps, bands, desired, fs=fs)
 
@@ -81,4 +81,6 @@ plt.ylabel('Gain')
 plt.xlabel('Frequency (Hz)')
 
 plt.tight_layout()
-plt.savefig('firls_example.pdf')
+# plt.savefig('firls_example.pdf')
+plt.show()
+

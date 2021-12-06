@@ -12,8 +12,8 @@ gains = [1,  1, 0.1,  1,   1,   0,    0]
 
 numtaps = 185
 
-taps_none = firwin2(numtaps, freqs, gains, fs=fs, window=None)
-taps_h = firwin2(numtaps, freqs, gains, fs=fs)
+taps_none = firwin2(numtaps, freqs, gains, fs=fs, window='boxcar')
+taps_h = firwin2(numtaps, freqs, gains, fs=fs)  # default window Hamming
 
 beta = 2.70
 taps_k = firwin2(numtaps, freqs, gains, fs=fs, window=('kaiser', beta))
