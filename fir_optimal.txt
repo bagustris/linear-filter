@@ -1,0 +1,9 @@
+## materi: https://github.com/bagustris/linear-filter
+
+# final lecture signal system
+# Filter design optimization
+
+# Codes:
+# 1. code/signal/lowpass_design_specs.py: spec
+# 2. code/signal/kaiser_lowpass_filter_design.py: windowing kaiser
+# 3. code/signal/opt_lowpass.py: remez

@@ -17,7 +17,7 @@ def bellanger_estimate(deltap, deltas, width, fs):
 
 
 def remez_lowpass(deltap, deltas, cutoff, width, fs):
-
+    """ estimate coeffient of each taps"""
     numtaps = bellanger_estimate(deltap, deltas, width, fs)
     numtaps |= 1  # Bitwise OR with 1 to ensure an odd number of taps.
     trans_lo = cutoff - 0.5*width

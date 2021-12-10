@@ -108,4 +108,5 @@ plt.grid(alpha=0.25)
 plt.xlabel('Frequency (Hz)')
 plt.tight_layout()
 
-plt.savefig('kaiser_lowpass_filter_design.pdf')
+# plt.savefig('kaiser_lowpass_filter_design.pdf')
+plt.show()
