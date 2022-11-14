@@ -55,3 +55,5 @@ plt.xlim(0, T)
 plt.legend(framealpha=1, shadow=True, loc='upper left')
 plt.tight_layout()
 plt.savefig("bandpass_example_signals.pdf")
+
+plt.show()

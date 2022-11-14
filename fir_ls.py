@@ -9,7 +9,7 @@
 # 4. Linear programming method
 ###############################################################################
 
-# 1. least-squares method
+# 2. least-squares method
 import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt

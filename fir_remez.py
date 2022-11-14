@@ -1,3 +1,12 @@
+###############################################################################
+# methods to design FIR filters
+# 1. windowed method
+# 2. least-squares method
+# 3. Parks-McClellan method
+# 4. Linear programming method
+###############################################################################
+
+# 3. Parks-McClellan method based on the Remez exchange algorithm
 from __future__ import division, print_function
 
 import numpy as np
@@ -30,7 +39,7 @@ for numtaps in [31, 47]:
     plt.plot(w2, np.abs(h2), linewidth=1, label='(b)')
 
     rect = plt.Rectangle((bands[1], 0), bands[2]-bands[1], 1.0,
-                         facecoplt.title('Least Squares Filter Design', fontsize=10)lor='k',
+                         facecolor='k',
                          edgecolor='k',
                          alpha=0.075)
     plt.gca().add_patch(rect)
@@ -48,5 +57,5 @@ for numtaps in [31, 47]:
     plt.ylabel('Gain')
     plt.title("Bandpass filters designed with remez", fontsize=10)
     plt.tight_layout()
-
+    plt.show()
     # plt.savefig("remez_example_%dtaps.pdf" % numtaps)

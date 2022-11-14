@@ -1,3 +1,12 @@
+###############################################################################
+# methods to design FIR filters
+# 1. windowed method
+# 2. least-squares method
+# 3. Parks-McClellan method
+# 4. Linear programming method
+###############################################################################
+
+# 4. Linear programming method
 from __future__ import division, print_function
 
 import warnings
