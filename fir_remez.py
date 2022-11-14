@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ###############################################################################
 # methods to design FIR filters
 # 1. windowed method
@@ -7,6 +8,10 @@
 ###############################################################################
 
 # 3. Parks-McClellan method based on the Remez exchange algorithm
+||||||| merged common ancestors
+=======
+# TODO: optimized this code
+>>>>>>> 68635d433d3c4c76bc8ad78bf5fc50c58180ba08
 from __future__ import division, print_function
 
 import numpy as np
@@ -18,17 +23,18 @@ fs = 2000
 
 bands = [0, 250, 350, 550, 700, 0.5*fs]
 desired = [0, 1, 0]
-weights = [1, 1, 1]
+ 
 
 for numtaps in [31, 47]:
-
-    taps = remez(numtaps, bands, desired, fs=fs)
+    weights1 = [1, 1, 1]
+    taps = remez(numtaps, bands, desired, weights1, fs=fs)
 
     w, h = freqz(taps, worN=8000)
     w *= 0.5*fs/np.pi
 
-    weights = [1, 25, 1]
-    taps2 = remez(numtaps, bands, desired, weights, fs=fs)
+    weights2 = [1, 25, 1]
+    #weights = list(weights1, weights2)
+    taps2 = remez(numtaps, bands, desired, weights2, fs=fs)
 
     w2, h2 = freqz(taps2, worN=8000)
     w2 *= 0.5*fs/np.pi

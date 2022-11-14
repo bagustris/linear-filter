@@ -20,7 +20,7 @@ gains = [1, 1, 0.1, 1, 1, 0, 0]
 fs = 2000
 taps = 185
 
-windows = ['boxcar', 'hamming', 'blackman']
+windows = ['boxcar', 'triang', 'hann', 'hamming', 'bartlett', 'blackman']
 # taps = []
 
 for window in windows:

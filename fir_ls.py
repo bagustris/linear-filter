@@ -24,7 +24,7 @@ bands = np.array([0, f1, f1, f2, f2, 0.5*fs])
 desired = np.array([1,  1,  1,  0,  0,    0])
 
 wts1 = None
-wts2 = [100, .01, 1]
+wts2 = [100, 0.01, 1]
 
 for wts in [wts1, wts2]:
     taps = signal.firls(numtaps, bands, desired, weight=wts, fs=fs)
