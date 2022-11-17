@@ -3,10 +3,10 @@ A  repo for tutorial on linear filtering using scipy, forked from Warren Weckess
 It is designed for undergraduate (Signal & System) and post-graduate students (Signal Processing) 
 at department of Engineering Physics, ITS Surabaya.
 
-## IIR Filter
+## IIR filter
 Try python files with name `iir_*.py`
 
-## FIR Filter
+## FIR filter
 Try python files with neme `fir_*.py`
 
 ## Filter design
