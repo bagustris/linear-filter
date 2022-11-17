@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ###############################################################################
 # methods to design FIR filters
 # 1. windowed method
@@ -8,10 +7,6 @@
 ###############################################################################
 
 # 3. Parks-McClellan method based on the Remez exchange algorithm
-||||||| merged common ancestors
-=======
-# TODO: optimized this code
->>>>>>> 68635d433d3c4c76bc8ad78bf5fc50c58180ba08
 from __future__ import division, print_function
 
 import numpy as np
@@ -23,7 +18,7 @@ fs = 2000
 
 bands = [0, 250, 350, 550, 700, 0.5*fs]
 desired = [0, 1, 0]
- 
+
 
 for numtaps in [31, 47]:
     weights1 = [1, 1, 1]
