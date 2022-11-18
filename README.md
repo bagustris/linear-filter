@@ -10,4 +10,4 @@ Try python files with name `iir_*.py`
 Try python files with neme `fir_*.py`
 
 ## Filter design
-Follow instrunction in `fir_optimal.txt`
+Follow instruction in `fir_optimal.txt`
